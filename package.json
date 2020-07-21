@@ -1,0 +1,25 @@
+{
+  "name": "becca-discord-bot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./lib/index.js",
+    "pc": "node ./lib/promo-codes.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Aspern/becca-discord-bot.git"
+  },
+  "author": "adrian@kuebler-weber.de",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Aspern/becca-discord-bot/issues"
+  },
+  "homepage": "https://github.com/Aspern/becca-discord-bot#readme",
+  "dependencies": {
+    "discord.js": "^12.2.0",
+    "jsdom": "^16.3.0",
+    "node-html-parser": "^1.2.20"
+  }
+}
