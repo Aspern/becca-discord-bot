@@ -19,6 +19,8 @@ pids
 lib-cov
 
 .idea/
+tmp/
+build/
 
 # Coverage directory used by tools like istanbul
 coverage
