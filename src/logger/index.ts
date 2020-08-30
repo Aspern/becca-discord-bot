@@ -11,6 +11,7 @@ class Index {
                 winston.format.printf(info => `${info.timestamp} ${info.level}: ${info.message}`)
             ),
             transports: [
+                new winston.transports.File({ filename: '/tmp/becca/becca.log', level: 'info' }),
                 new winston.transports.Console()
             ]
         })
