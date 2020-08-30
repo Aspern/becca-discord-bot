@@ -4,5 +4,6 @@ export default interface Settings {
     voiceChannelId: string
     workingDir: string
     playerDataSource?: string
-    awsRegion: string
+    awsRegion: string,
+    allowSpeech: string[]
 }

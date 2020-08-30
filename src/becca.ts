@@ -132,15 +132,21 @@ export default class Becca {
     private async speak(message: Message, {msg}: { msg: string }) {
         const channel = await this.client.channels.cache.get(this.settings.voiceChannelId)
 
-        if (channel instanceof VoiceChannel && channel.joinable) {
-            const connection = await channel.join()
-            try {
-                await this.say(`<speak>${msg}</speak>`, connection)
-            } catch (error) {
+        if(this.settings.allowSpeech && this.settings.allowSpeech.indexOf(message.author.username) > -1) {
+            if (channel instanceof VoiceChannel && channel.joinable) {
+                const connection = await channel.join()
+                try {
+                    await this.say(`<speak>${msg}</speak>`, connection)
+                } catch (error) {
+                    connection.disconnect()
+                }
                 connection.disconnect()
             }
-            connection.disconnect()
+        } else {
+            await message.reply('Sorry, aber ich darf nicht mit dir reden :cry:')
         }
+
+
     }
 
     private async say(message: string, connection: VoiceConnection) {
