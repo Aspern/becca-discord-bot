@@ -2,15 +2,15 @@
   "name": "becca-discord-bot",
   "version": "1.0.0",
   "description": "",
-  "main": "./src/main.js",
+  "main": "dist/src/index.js",
   "scripts": {
-    "build": "rimraf ./build && tsc",
+    "build": "rimraf ./dist && tsc",
     "start:dev": "nodemon -- -s ./tmp/settings.json",
     "start": "npm run build && node build/index.js -- -s ./tmp/settings.json",
     "test": "jest --collect-coverage"
   },
   "bin": {
-    "start-becca": "build/index.js"
+    "start-becca": "dist/src/index.js"
   },
   "repository": {
     "type": "git",

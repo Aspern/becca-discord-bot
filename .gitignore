@@ -20,7 +20,7 @@ lib-cov
 
 .idea/
 tmp/
-build/
+dist/
 
 # Coverage directory used by tools like istanbul
 coverage

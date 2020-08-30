@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 import {program} from 'commander';
 // @ts-ignore
 import * as packageInfo from '../package.json'
