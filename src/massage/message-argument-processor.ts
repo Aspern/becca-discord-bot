@@ -1,3 +1,5 @@
+import {RallyOptionParser} from "../rally/rally-option-parser";
+
 export default class MessageArgumentProcessor {
     private processors = {
         alliance: (args: string): any => {
@@ -11,6 +13,18 @@ export default class MessageArgumentProcessor {
             }
 
             return options
+        },
+
+        speak: (args: string): any => {
+            return {
+                msg: args
+            }
+        },
+
+        rally: (args: string): any => {
+            const parser = new RallyOptionParser()
+
+            return parser.parse(args)
         }
     }
 

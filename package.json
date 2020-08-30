@@ -6,7 +6,7 @@
   "scripts": {
     "build": "rimraf ./build && tsc",
     "start:dev": "nodemon -- -s ./tmp/settings.json",
-    "start": "npm run build && node build/index.js ./tmp/settings.json",
+    "start": "npm run build && node build/index.js -- -s ./tmp/settings.json",
     "test": "jest --collect-coverage"
   },
   "bin": {
@@ -24,6 +24,7 @@
   "homepage": "https://github.com/Aspern/becca-discord-bot#readme",
   "dependencies": {
     "@discordjs/opus": "^0.3.2",
+    "@types/jest": "^26.0.10",
     "ascii-table": "0.0.9",
     "aws-sdk": "^2.738.0",
     "axios": "^0.19.2",
@@ -32,8 +33,11 @@
     "csvtojson": "^2.0.10",
     "discord.js": "^12.2.0",
     "ffmpeg-static": "^4.2.7",
+    "jest": "^26.4.2",
     "jsdom": "^16.4.0",
+    "moment": "^2.27.0",
     "node-html-parser": "^1.2.20",
+    "ts-jest": "^26.3.0",
     "winston": "^3.3.3"
   },
   "devDependencies": {

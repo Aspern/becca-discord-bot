@@ -23,6 +23,18 @@ class Help {
             'Zeigt eine Tabelle mit den 10 stärksten Spielern im Chat an (sortierbar nach Spalte)'
         )
 
+        table.addRow(
+            'becca:rally',
+            'in <x> minutes',
+            'Koordiniert eine Menge von Rallys zum Zielzeitpunkt'
+        )
+
+        table.addRow(
+            '',
+            '[<player>#<rally>#<march>, ...]',
+            ''
+        )
+
         return `\`\`\`\n${table.toString()}\n\`\`\``
     }
 

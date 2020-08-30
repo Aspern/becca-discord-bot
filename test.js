@@ -1,12 +1,20 @@
-const axios =  require('axios')
+const moment = require('moment')
 
-axios.get('https://www.mejoress.com/en/state-of-survival-code-redeem-codes', {
-  headers: {
-    'User-Agent': 'test/1.0.0'
-  }
-}).then(response => {
-  console.log(response.data)
-}).catch(error => {
-  console.error(error)
-  console.log(error.response.data)
+
+
+let now = moment()
+let target = moment('22:00', 'HH:mm')
+let rallyTimer = moment('05:00', 'HH:mm')
+let marchDuration = moment('01:23', 'HH:mm')
+let speechDuration = moment('00:12', 'HH:mm')
+
+const duration = moment.duration({
+  minutes: 6,
+  seconds: 35
 })
+
+const start = target.subtract(duration.asSeconds(), 'seconds')
+
+console.log(duration.asSeconds())
+console.log(target.format())
+console.log(start.format())
