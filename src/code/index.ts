@@ -9,7 +9,7 @@ const logger = Logger.createLogger()
 
 export default class Code {
     static CODE_STORAGE = 'code-storage.txt'
-    static CODE_SOURCE = 'https://www.mejoress.com/en/state-of-survival-code-redeem-codes/'
+    static CODE_SOURCE = 'https://www.mrguider.org/articles/state-of-survival-codes-gift-redemption-codes-for-android-ios/'
 
     private callback: (data: CodeData) => void
     private settings: Settings
@@ -53,17 +53,7 @@ export default class Code {
                 response.on('end', () => {
                     const root = new jsdom.JSDOM(data)
                     const document = root.window.document
-                    const liElements = document.getElementsByTagName('li')
-
-                    for (let i = 0; i < liElements.length; i++) {
-                        const li = liElements[i]
-                        const text = li.textContent
-
-                        if (text.endsWith(': Redeem this code before expires')) {
-                            code = text.replace(': Redeem this code before expires', '')
-                            break;
-                        }
-                    }
+                    const code = document.getElementsByTagName('pre')[0].textContent
 
                     resolve(code)
                 })
