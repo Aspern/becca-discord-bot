@@ -27,7 +27,7 @@
     "@types/jest": "^26.0.10",
     "ascii-table": "0.0.9",
     "aws-sdk": "^2.738.0",
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "comander": "0.0.1-security",
     "commander": "^6.0.0",
     "csvtojson": "^2.0.10",
