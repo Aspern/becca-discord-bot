@@ -23,7 +23,7 @@
   },
   "homepage": "https://github.com/Aspern/becca-discord-bot#readme",
   "dependencies": {
-    "@discordjs/opus": "^0.3.2",
+    "@discordjs/opus": "^0.8.0",
     "@types/jest": "^26.0.10",
     "ascii-table": "0.0.9",
     "aws-sdk": "^2.738.0",
