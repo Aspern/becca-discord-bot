@@ -35,7 +35,7 @@
     "ffmpeg-static": "^4.2.7",
     "jest": "^26.4.2",
     "jsdom": "^16.4.0",
-    "moment": "^2.27.0",
+    "moment": "^2.29.4",
     "node-html-parser": "^1.2.20",
     "ts-jest": "^26.3.0",
     "winston": "^3.3.3"
